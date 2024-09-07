@@ -1,0 +1,122 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo para o body e fontes */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+}
+
+/* Estilo para o cabeçalho */
+header {
+    background-color: #222;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Estilo para o título principal */
+h1 {
+    font-size: 2.5em;
+}
+
+/* Estilo para a seção de seleção */
+#selection {
+    margin-bottom: 20px;
+    background-color: #444;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(255,255,255,0.1);
+}
+
+/* Estilo para os selects na seção de seleção */
+#filters select {
+    margin-right: 10px;
+    padding: 8px;
+    font-size: 1em;
+    border: 1px solid #666;
+    border-radius: 4px;
+    background-color: #555;
+    color: #fff;
+}
+
+/* Estilo para a seção de mapa e detalhes */
+.map-details-container {
+    display: flex;
+    align-items: flex-start; /* Alinha itens ao topo */
+}
+
+/* Estilo para a seção de detalhes da utilitária */
+#utility-details {
+    flex: 1;
+    margin-left: 20px;
+}
+
+/* Estilo para o título dos detalhes da utilitária */
+#utility-details h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+/* Estilo para a descrição da utilitária */
+#utility-description {
+    margin-bottom: 15px;
+    color: #ccc;
+}
+
+/* Estilo para o vídeo da utilitária */
+#utility-video {
+    width: 100%;
+    height: 300px; /* Ajuste conforme necessário */
+    border: none;
+    border-radius: 5px;
+}
+
+/* Estilo para a visualização do mapa */
+#map-view {
+    position: relative;
+    flex: 1; /* Ocupa o espaço restante */
+    max-width: 800px;
+    max-height: 750px; /* Ajuste conforme necessário */
+    width: 100%;
+    overflow: hidden;
+    background-color: #444;
+    border: 1px solid #666;
+    border-radius: 5px;
+}
+
+/* Estilo para o contêiner do mapa */
+#map-container {
+    position: relative;
+    padding-bottom: 60%; /* Proporção 3:2 para a imagem do mapa */
+    overflow: hidden;
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+}
+
+/* Estilo para a imagem do mapa */
+#map-image {
+    width: auto;
+    height: 100%;
+    display: block;
+    margin: auto; /* Centraliza a imagem dentro do contêiner */
+    filter: brightness(0.8); /* Ajusta o brilho da imagem */
+}
+
+/* Estilo para o overlay do mapa */
+#map-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Garante que o overlay não capture eventos do mouse */
+}

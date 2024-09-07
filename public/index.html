@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS2 Utilities Demo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>CS2 Utilities Demo</h1>
+    </header>
+    <main>
+        <section id="selection">
+            <h2>Seleção de Mapa, Equipes e Utilitárias</h2>
+            <div id="filters">
+                <select id="map-select">
+                    <option value="">Selecione o Mapa</option>
+                    <option value="mirage">Mirage</option>
+                    <option value="nuke">Nuke</option>
+                </select>
+                <select id="team-select">
+                    <option value="">Selecione a Equipe</option>
+                    <option value="ct">CT</option>
+                    <option value="t">T</option>
+                </select>
+                <select id="utility-type">
+                    <option value="">Escolha o Tipo de Utilitária</option>
+                    <option value="smokes">Smokes</option>
+                    <option value="flashs">Flashs</option>
+                </select>
+                <select id="available-utilities">
+                    <option value="">Escolha a Utilitária</option>
+                </select>                
+            </div>
+        </section>
+        <section id="map-and-details" class="map-details-container">
+            <section id="map-view">
+                <div id="map-container" style="display: none;">
+                    <img id="map-image" src="" alt="Map">
+                    <svg id="map-overlay"></svg>
+                </div>
+            </section>
+            <section id="utility-details">
+                <h2>Detalhes da Utilitária</h2>
+                <p id="utility-description">Descrição da utilitária selecionada.</p>
+                <iframe id="utility-video" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </section>
+        </section>
+    </main>
+    <script src="https://unpkg.com/panzoom@9.4.3/dist/panzoom.min.js"></script>
+    <script src="script.js" type="module"></script>
+</body>
+</html>

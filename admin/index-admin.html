@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Gerenciar Utilitários</title>
+    <link rel="stylesheet" href="style-admin.css">
+</head>
+<body>
+    <header>
+        <h1>Admin - Gerenciar Utilitários</h1>
+    </header>
+    <main>
+        <section id="utility-list">
+            <h2>Lista de Utilitários</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Mapa</th>
+                        <th>Equipe</th>
+                        <th>Tipo</th>
+                        <th>Nome</th>
+                        <th>Descrição</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="utility-table-body">
+                    <!-- Utilitários serão carregados aqui -->
+                </tbody>
+            </table>
+        </section>
+        <section id="utility-form">
+            <form id="utility-edit-form">
+                <h2>Adicionar/Editar Utilitário</h2>
+                <input type="hidden" id="utility-id">
+                <label for="map">Mapa:</label>
+                <select id="map">
+                    <option value="mirage">Mirage</option>
+                    <option value="nuke">Nuke</option>
+                </select>
+                <label for="team">Equipe:</label>
+                <select id="team">
+                    <option value="ct">CT</option>
+                    <option value="t">T</option>
+                </select>
+                <label for="type">Tipo:</label>
+                <select id="type">
+                    <option value="smokes">Smokes</option>
+                    <option value="flashs">Flashs</option>
+                </select>
+                <label for="name">Nome:</label>
+                <input type="text" id="name" required>
+                <label for="description">Descrição:</label>
+                <textarea id="description" required></textarea>
+                <label for="video">URL do Vídeo:</label>
+                <input type="text" id="video" required>
+                <label for="start-x">Início X:</label>
+                <input type="number" id="start-x" required>
+                <label for="start-y">Início Y:</label>
+                <input type="number" id="start-y" required>
+                <label for="end-x">Fim X:</label>
+                <input type="number" id="end-x" required>
+                <label for="end-y">Fim Y:</label>
+                <input type="number" id="end-y" required>
+                <button type="submit">Salvar</button>
+            </form>
+            <div id="map-selection">
+                <h3>Selecione os pontos na imagem do mapa</h3>
+                <div id="map-container">
+                    <img id="map-image" src="" alt="Map">
+                    <canvas id="map-canvas"></canvas>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="script-admin.js" type="module"></script>
+</body>
+</html>
